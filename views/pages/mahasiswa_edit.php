@@ -56,6 +56,7 @@ if (!isset($_SESSION['username'])) {
                                             </div>
                                             <div class="col-md-4">
                                                 <label for="nim" class="form-label">NIM</label>
+                                                <input type="hidden" class="form-control" id="nim" name="old_nim" value="<?= $d['nim'] ?>">
                                                 <input type="text" class="form-control" id="nim" name="nim" required value="<?= $d['nim'] ?>">
                                             </div>
                                             <div class="col-md-4">
