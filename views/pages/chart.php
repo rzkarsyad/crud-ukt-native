@@ -43,11 +43,11 @@ if (!isset($_SESSION['username'])) {
                         <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
                             <div class="card flex-fill">
                                 <div class="card-header">
-
                                     <h5 class="card-title mb-0">Prodi</h5>
                                 </div>
                                 <div class="card-body d-flex">
                                     <div class="align-self-center w-100">
+                                        <p>Grafik chart total mahasiswa untuk setiap prodinya</p>
                                         <div class="chart">
                                             <canvas id="myChart"></canvas>
                                         </div>

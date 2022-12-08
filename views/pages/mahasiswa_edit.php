@@ -57,7 +57,7 @@ if (!isset($_SESSION['username'])) {
                                             <div class="col-md-4">
                                                 <label for="nim" class="form-label">NIM</label>
                                                 <input type="hidden" class="form-control" id="nim" name="old_nim" value="<?= $d['nim'] ?>">
-                                                <input type="text" class="form-control" id="nim" name="nim" required value="<?= $d['nim'] ?>">
+                                                <input type="text" class="form-control" id="nim" name="nim" required value="<?= $d['nim'] ?>" readonly>
                                             </div>
                                             <div class="col-md-4">
                                                 <label for="jk" class="form-label">Jenis Kelamin</label>
