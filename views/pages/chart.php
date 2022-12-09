@@ -40,17 +40,14 @@ if (!isset($_SESSION['username'])) {
                     <h1 class="h3 mb-3"><strong>Chart</strong></h1>
 
                     <div class="row">
-                        <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
+                        <div class="col-12 col-xxl-12 d-flex order-1 order-xxl-1">
                             <div class="card flex-fill">
                                 <div class="card-header">
-                                    <h5 class="card-title mb-0">Prodi</h5>
+                                    <h5 class="card-title mb-0">Grafik Program Studi</h5>
                                 </div>
                                 <div class="card-body d-flex">
-                                    <div class="align-self-center w-100">
-                                        <p>Grafik chart total mahasiswa untuk setiap prodinya</p>
-                                        <div class="chart">
-                                            <canvas id="myChart"></canvas>
-                                        </div>
+                                    <div class="chart">
+                                        <canvas id="myChart"></canvas>
                                     </div>
                                 </div>
                             </div>

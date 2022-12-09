@@ -28,6 +28,7 @@ if (!isset($_SESSION['username'])) {
     <link href="../../assets/css/app.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.1/css/dataTables.semanticui.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -85,9 +86,12 @@ if (!isset($_SESSION['username'])) {
                                                     <td><?php echo $d['semester']; ?></td>
                                                     <td>
                                                         <a href="mahasiswa_edit.php?nim=<?php echo $d['nim']; ?>" class="btn btn-sm btn-warning"><i class="align-middle" data-feather="edit-2"></i></a>
-                                                        <a href="mahasiswa_delete.php?nim=<?php echo $d['nim']; ?>" class="btn btn-sm btn-danger mt-2"> <i class="align-middle" data-feather="trash"></i></a>
+                                                        <button type="button" class="btn btn-danger btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalHapus<?= $no ?>">
+                                                            <i class="align-middle" data-feather="trash"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
+                                                <?php include 'delete_confirmation.php' ?>
                                             <?php
                                             }
                                             ?>
@@ -361,7 +365,6 @@ if (!isset($_SESSION['username'])) {
             });
         });
     </script>
-
 </body>
 
 </html>

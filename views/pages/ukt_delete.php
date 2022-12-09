@@ -2,11 +2,9 @@
 // koneksi database
 include '../../connection.php';
 
-// menangkap data id yang di kirim dari url
-$id = $_GET['id'];
-
-// menghapus data dari database
-mysqli_query($connection, "delete from pembayaran_ukt where id='$id'");
-
-// mengalihkan halaman kembali ke index.php
-header("location:ukt.php");
+if (isset($_POST['hapusdataUKT'])) {
+    $query = mysqli_query($connection, "delete from pembayaran_ukt where id='$_POST[id]'");
+    if ($query) {
+        header("location:ukt.php");
+    }
+}

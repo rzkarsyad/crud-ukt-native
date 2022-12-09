@@ -88,7 +88,7 @@ if (!isset($_SESSION['username'])) {
                                             <input type="text" class="form-control" id="semester" name="semester" required>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary">Simpan</button>
+                                            <button type="submit" name="btnAddMahasiswa" class="btn btn-primary">Simpan</button>
                                         </div>
                                     </form>
                                 </div>
